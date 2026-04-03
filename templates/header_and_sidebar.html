@@ -1,0 +1,24 @@
+<!-- This file houses my header and sidebar so I can just include it rather than having to write it out separately for each page -->
+<!-- I want to use a non-standard font, so the below line pulls it in for use -->
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+<header><h1 style="font-size: 2rem; padding: 10px;"><a href="index.php" style="text-decoration: none; color: #f3f0f7;">Protein Explorer</a></h1></header>
+
+<sidebar>
+    <?php $example_dataset = "WyIxNzIwNzgzNjkxIiwgIjIyNDA1NDk5MiIsICIyNDY2ODI2NDEwIiwgIjI0NjY4NDczNjEiLCAiMjkyNTk5NDc0NSIsICIyOTM1NzU1ODY4IiwgIjI5MzU3ODExNjkiLCAiMjkzNTc4MTE3MSIsICI3MDAzODQ3MzQiLCAiOTI5NDUyNjUxIl0="; ?>
+    <h3 style="font-size: 1.2rem; color: #7c5cbf;">PAGES:</h3>
+        <ul style="list-style-type: none; padding: 0;"> <!-- Removes bullet points from the list -->
+            <li><a href="index.php"><?php echo $page == 'home' ? '<b>Home</b>' : 'Home'; ?></a></li>
+            <li><a href="search.php"><?php echo $page == 'search' ? '<b>Search</b>' : 'Search'; ?></a></li>
+            <li><a href="<?php echo 'results.php?search_id=' . urlencode($example_dataset); ?>"><?php echo $page == 'example' ? '<b>Example Dataset</b>' : 'Example Dataset'; ?></a></li>
+            <li><a href="previous_searches.php"><?php echo $page == 'previous_searches' ? '<b>Previous Searches</b>' : 'Previous Searches'; ?></a></li>
+            <li><a href="context.php"><?php echo $page == 'context' ? '<b>Context</b>' : 'Context'; ?></a></li>
+            <li><a href="about.php"><?php echo $page == 'about' ? '<b>About</b>' : 'About'; ?></a></li>
+            <li><a href="credits.php"><?php echo $page == 'credits' ? '<b>Credits</b>' : 'Credits'; ?></a></li>
+        </ul>
+    <!-- TODO: B number github -->
+    <a href= "https://github.com/B285460-2025/IWDD_Website_ICA"> 
+    <img src="images/GitHub_Lockup_Black_Clearspace.png" alt="Github logo linking to website source code" title="Image Source: https://brand.github.com/foundations/logo" style="position: absolute; bottom: 16px; left: 16px; width: 100px;">
+    </a>
+</sidebar>
+
